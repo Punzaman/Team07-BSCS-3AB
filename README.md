@@ -1,2 +1,1 @@
-Team 7 Initial Commit
-Kurky was here
+Team 7 Starting Files
