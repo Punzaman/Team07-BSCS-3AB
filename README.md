@@ -1,1 +1,1 @@
-Team 7 Initial Commit
+WELCOME TO GROUP 7 REPOSITORY
