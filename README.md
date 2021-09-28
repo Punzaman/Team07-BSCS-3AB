@@ -1,2 +1,1 @@
 WELCOME TO GROUP 7 REPOSITORY
-My Name is Kurky
