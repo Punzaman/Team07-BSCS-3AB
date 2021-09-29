@@ -1,2 +1,2 @@
 WELCOME TO GROUP 7 REPOSITORY
-Daniel Ruiz
+Daniel Ruiz Borromeo
