@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  div.elem-group {
+    margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+    width: 49%;
+  }
+  
+  label {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 1.5px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  button {
+    padding: 1rem;
+    background: #333;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: lightblue;
+  }
