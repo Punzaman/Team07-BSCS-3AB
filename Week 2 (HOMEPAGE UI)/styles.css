@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    color: #3F3E39;
+    scroll-behavior: smooth;
+}
+header{
+    min-height: 100vh;
+    background: url(bg1.jpg) center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.container{
+    max-width: 3320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #1761C1;
+}
+.container .btn:hover{
+    background-color: #6b6130;
+    color: #ffffff;
+}
+.container .card{
+    margin-inline: 1rem;
+}
+.container .card .form-floating{
+    color: #3F3E39;
+}
+.container .card .btn{
+    color: #ffffff;
+    margin: 0.5rem;
+}
+.container .card #forgotPass{
+    color: #1761C1;
+    text-decoration: none;
+}
+.container .card hr{
+    color: #3F3E39;
+    width: 90%;
+}
+@media only screen and (min-width:950px){
+    .container .card{
+        width: 800px;
+    }
+}
+@media only screen and (max-width:950px){
+    .container{
+        flex-direction: column;
+    }
+    .container .card{
+        width: auto;
+    }
+}
