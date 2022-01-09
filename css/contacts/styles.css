@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    color: #3F3E39;
+    scroll-behavior: smooth;
+}
+header{
+    min-height: 100vh;
+    padding: 1rem;
+    background: #C69552  center/cover no-repeat fixed;
+    justify-content: stretch;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    height: auto;
+    width: 60px;
+}
+h2{
+    margin: 0.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+button{
+    color: #ffffff;
+    opacity: 1;
+}
+.navbar-toggler-icon{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.container{
+    max-width: 3320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+}
+.navbar-nav .nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+.navbar-nav .nav-link:hover{
+    color: #DC1E00;
+}
+.section-d{
+    background-color: #C69552;
+}
+.section-d .heading h1{
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+    font-family: 'Fredoka One', cursive;
+}
+.contactpage{
+    min-height: 70vh;
+}
+@media only screen and (max-width: 850px){
+    #mycontacts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+#mycontacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstcont {
+    margin-left: 3rem;
+    padding: 2rem;
+    width: 30vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+@media only screen and (max-width: 1100px){
+    .firstcont {
+        height: auto;
+        padding: 2rem;
+    }
+}
+@media only screen and (max-width: 850px){
+    .firstcont {
+        margin: 2rem;
+        width: 60vw;
+        padding: 2rem;
+    }
+}
+.button {
+    color: white;
+    background-color: #C69552;
+    border: 1px solid rgba(255, 255, 255, 0.254);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 30px;
+    width: 105px;
+}
+.firstcont a:hover{
+    color: red;
+}
+.secondcont {
+    margin-left: 2rem;
+    padding: 2rem;
+    padding-top: 4rem;
+    width: 23vw;
+    height: 55vh;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    line-height: 1.8rem;
+}
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(70px, auto);
+    grid-gap: 5px;
+    line-height: 1.5;
+}
+.lineone{
+    grid-column: 3;
+    grid-row: 1;
+    text-align: center;
+}
+.linetwo{
+    grid-column: 4;
+    grid-row: 1/2;
+    padding-left: 20px;
+}
+.linethree{
+    grid-column: 4/3;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 7px;
+}
+.linefour{
+    grid-column: 4;
+    grid-row: 2/3;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+.linefive{
+    grid-column: 3;
+    grid-row: 3/4;
+    text-align: center;
+}
+.linesix{
+    grid-column: 4/6;
+    grid-row: 3/3;
+    padding-left: 20px;
+}
+.secondcont h4{
+    color: #fff;
+}
+.secondcont p{
+    color: #fff;
+}
+.secondcont i{
+    color: #fff;
+}
+footer{
+    background-color: #724405;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    color: #fff;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+.social-links a:hover{
+    color: #DC1E00;
+}
