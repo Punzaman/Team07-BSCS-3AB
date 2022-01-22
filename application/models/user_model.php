@@ -117,7 +117,7 @@ class User_model extends CI_Model {
 	public function updateUser($data){
 
 		if($this->update_usernameExist($data['username'], $data['user_id'])){
-			echo "usernameE";
+			echo "username";
 			return;
 		}
 		

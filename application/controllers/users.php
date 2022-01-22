@@ -18,11 +18,6 @@ class Users extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
-
 	#Function that calls signup.php
 	
 	public function signup(){
@@ -55,6 +50,8 @@ class Users extends CI_Controller {
 				$_SESSION['user_firstname'] = $return[0]['user_firstname'];
 				$_SESSION['user_lastname'] = $return[0]['user_lastname'];
 				$_SESSION['user_email'] = $return[0]['user_email'];
+				$_SESSION['user_cpnumber'] = $return[0]['user_cpnumber'];
+				$_SESSION['user_address'] = $return[0]['user_address'];
 				redirect(base_url(). "users/homepage");
 			}
 		}
@@ -68,9 +65,9 @@ class Users extends CI_Controller {
     }
 
 	#Function that calls profile.php
-	public function entrypage(){
+	public function landing(){
 
-		$this->load->view('users/entrypage');
+		$this->load->view('users/landing');
 	}
 
 	public function about(){
@@ -158,15 +155,34 @@ class Users extends CI_Controller {
 			$output['result'][$i] = array_merge($reserve[$i], $vehicle[$i]);
 			$i++;
 		}
-
-		
-
 		//return the data in view
 		$this->load->view('users/parkinghistory', $output);
-
 		
    }
-	
-}
 
-	
+   public function parking($id=null){
+	//load the database
+	$this->load->database();
+	//load the model
+	$this->load->model('select_vehicle');
+	$this->load->model('select_reservation');
+	$reserve = $this->select_reservation->getReservation($_SESSION['user_id']);
+	$vehicle = array();
+	$try = array();
+	$i = 0;
+	//pangkuha ng vehivle bawat reservation
+	foreach($reserve as $r){
+		$try [] = $this->select_vehicle->getVehicle(NULL, $r['reserveVehicle']);
+		$vehicle[$i] = $try[$i][0];
+		$i++;
+	}
+	$i = 0;
+	//pang merge ng nakuhang vehicle sa reservation details
+	foreach($reserve as $r){
+		$output['result'][$i] = array_merge($reserve[$i], $vehicle[$i]);
+		$i++;
+	}
+	//return the data in view
+	$this->load->view('users/parking', $output);
+}
+}

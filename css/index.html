@@ -26,36 +26,36 @@
 </head>
 <body>
   <header>
-  <nav class="navbar navbar-expand-md px-4">
+  <nav class="navbar navbar-expand-md px-4 navbar-dark">
     <div class="container-fluid">
-      <a href="index.html" class="navbar-brand"><img id="logo" src="images/PayPark Logo.png" alt="PayPark LOGO">
+      <a href="index.html" class="navbar-brand"><img id="logo" src="images/PayPark.png" alt="PayPark LOGO">
       <h2> PAYPARK</h2></a>
     
     <button type="button" class="navbar-toggler"
     data-bs-toggle="collapse"
     data-bs-target="#navbarLinks">
+    
       <span class="navbar-toggler-icon"> </span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarLinks">
       <div class="navbar-nav ms-auto">
-            <a href="About/index.html" class="nav-item nav-link mx-auto px-2">ABOUT</a>
+            <a href="#aboutsection" class="nav-item nav-link mx-auto px-2">ABOUT</a>
             <a href="#" class="nav-item nav-link mx-auto px-2">LOREM</a>
             <a href="#" class="nav-item nav-link mx-auto px-2">LOREM</a>
-            <a href="#" class="nav-item nav-link mx-auto px-2">LOREM</a>
+            <a href="#contactsection" class="nav-item nav-link mx-auto px-2">CONTACTS</a>
       </div>
     </div>
    </div>
   </nav>
-
   <div class="container p-5">
-    <div class="p-5">
+    <div class="p-5 mt-4">
       <h1><strong>WELCOME TO PAYPARK!</strong> </h1>
       <p class="lead ">Let's make your parking experience easier, safer and more convenient. Create your own account now and experience parking with cashless payment transaction.</p>
 
-      <p><a href="#" target="_blank" id="regBtn" class="btn btn-light btn-lg mt-2">EXPLORE</a></p>
+      <p><a href="#aboutsection" id="regBtn" class="btn btn-light btn-lg mt-2">EXPLORE</a></p>
     </div>
-
+    
     <div class="card m-3 card-md card-lg justify-content-center">
       <div class="form-floating mb-2 p-2">
         <input type="email" class="form-control" id="emailInput" placeholder="Email / Account Name">
@@ -68,11 +68,140 @@
 
       <p class="mx-auto"><a href="#" id="forgotPass"> FORGOT PASSWORD</a></p>
 
-      <a href="register/register.html" class="btn btn-success btn-lg">REGISTER</a>
+      <a href="register/index.html" class="btn btn-success btn-lg">REGISTER</a>
 
     </div>
   </div>
+  </header>
 
+  <!----- ABOUT SECTION ----->
+  <div id="aboutsection">
+    
+    <div class="arrow position-fixed bottom-0 end-0 m-4">
+      <a href="#navbarLinks" class="fa fa-arrow-up"></a>
+  </div>
+  <div class="container p-5">
+    <div class="abouttext p-5 mt-5">
+      <h1> <strong>About Us</strong> </h1>
+      <p class="lead "> Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, quae quis iure, praesentium eius hic quibusdam quo voluptas tempora libero dicta beatae maxime dolore possimus ea suscipit maiores! Voluptatem, corrupti! </p>
+    </div>
+    
+  <div class="aboutimg mx-5 mt-5">
+  <div class="card m-2 card-md card-lg justify-content-center">
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-item-active">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="images/park.jpg" style="height: 23rem" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/car.jfif" style="height: 23rem" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/parking2.jpg" style="height: 23rem" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/ssss.png" style="height: 23rem" alt="Fourth slide">
+      </div>
+    </div>
+    <button class="carousel-control-prev" href="#carouselExampleIndicators" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" href="#carouselExampleIndicators" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </div>
+  </div>  
+  </div>
+  </div>
+
+  <!----- MEMBERS SECTION ------>
+  
+
+  <!----- CONTACTS SECTION ----->
+  <section class="section-d">
+    <div class="heading" id="contactsection">
+        <h1>CONTACT US</h1></div>
+        <section class="contactpage">
+  
+  <div id="mycontacts">
+    <div class="firstcont">
+        
+            <div class="contact-head">
+                <h4 class="text-light">Get in Touch</h4>
+            </div>
+  
+            <div class="form-floating mb-2">
+              <input type="name" class="form-control" id="floatingInput" style="height: 60px" placeholder="Name">
+              <label for="floatingInput"><i class="fa fa-user"></i> Name</label>
+            </div>
+  
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control" id="floatingInput" style="height: 60px" placeholder="Email">
+              <label for="floatingInput"><i class="fa fa-envelope"></i> Email</label>
+            </div>
+  
+            <div class="form-floating  mb-3">
+              <textarea class="form-control" placeholder="Message" id="floatingTextarea" style="height: 100px"></textarea>
+              <label for="floatingTextarea">Message</label>
+            </div>
+  
+            <a href="index.html" type="submit" class="button">Submit</a>
+            
+      
+    </div>
+        
+      <div class="secondcont">
+       
+        <div class="wrapper">
+  
+          <div class="lineone">
+              <i class="fa fa-map-marker"></i>
+          </div>
+  
+          <div class="linetwo"> 
+            <h4>Location</h4>
+              <p>Manila</p>
+          </div>
+  
+          <div class="linethree">
+            <i class="fa fa-phone"></i>
+          </div>
+  
+          <div class="linefour">
+            <h4>Let's Talk</h4>
+            <p>+639-999-9999</p>
+         </div>
+  
+         <div class="linefive">
+          <i class="fa fa-envelope-open"></i>
+         </div>
+  
+         <div class="linesix">
+          <h4>Email Us</h4>
+          <p><a href="mailto:chiquichi18@gmail.com">paypark@gmail.com</a></p>
+         </div>
+  
+        </div>
+      
+     </div>
+  </div>
+  </section>
+  </section>
+  </header>
+  
+  <!----- FOOTER SECTION ----->
+  <footer>
+    <div class="social-links">
+        <a href="" target="_blank"> <i class="fa fa-facebook-f"></i></a>
+        <a href="" target="_blank"> <i class="fa fa-twitter"></i></a>
+        <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
+    </div>
+    <h5>Copyright &copy;2021 PayPark | All Rights Reserved</h5>
+  </footer>
 
 
 

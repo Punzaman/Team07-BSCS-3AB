@@ -57,31 +57,33 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="eMail"><strong>Gender</strong></label>
+                            <label for="gender"><strong>Gender</strong></label>
                             <p><em>Female/Male</em></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="phone"><strong>Age</strong></label>
+                            <label for="age"><strong>Age</strong></label>
                             <p><em>00000000 years old</em></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="website"><strong>Nationality</strong></label>
+                            <label for="uri"><strong>Nationality</strong></label>
                             <p><em>Filipino</em></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label for="phone"><strong>Phone</strong></label>
-                            <p><em>+6999999999999</em></p>
+                            <?php 
+                            echo "<p>" . $_SESSION["user_cpnumber"] . "</p>";
+                            ?>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="website"><strong>Email</strong></label>
+                            <label for="email"><strong>Email</strong></label>
                             <?php 
                             echo "<p>" . $_SESSION["user_email"] . "</p>";
                             ?>
@@ -95,7 +97,9 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label for="Street"><strong>Street</strong></label>
-                            <p><em>lorem street</em></p>
+                            <?php 
+                            echo "<p>" . $_SESSION["user_address"] . "</p>";
+                            ?>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">

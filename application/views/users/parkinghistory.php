@@ -3,12 +3,21 @@
     /* print_r($result); */
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml%22%3E
    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>Untitled Document</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <style>
+table{
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+}
+tr,td{
+  border: 1px solid black;
+  text-align: center;
+}
+</style>
    </head>
-   <table border="1">
+   <table>
       <tbody>
          <tr>
             <td>Reserve Date</td>
@@ -43,7 +52,6 @@
    </table>
 <body>
 </body>
-</html>
 
 <?php
     $this->load->view('templates/footer.php');
