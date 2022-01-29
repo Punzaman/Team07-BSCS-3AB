@@ -1,0 +1,133 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    scroll-behavior: smooth;
+    background: #3F3E39;
+}
+.container-fluid{
+    min-height: 95vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#flogo{
+    height: auto;
+    width: 60px;
+}
+h2{
+    margin: 0.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #C69552;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+}
+.lead{
+    color: #f3f3f3;
+}
+.fpCard{
+    background: #acacac;
+    border-radius: 15px;
+    height: 50vh;
+    width: 35vw;
+}
+#pass{
+    width: 30vw;
+}
+#confirmCode{
+    width: 30vw;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navbar-nav .nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+.navbar-nav .nav-link:hover{
+    color: #DC1E00;
+}
+@media only screen and (max-width:1200px){
+    .fpCard{
+        width: 40vw;
+    }
+    #pass{
+        width: 35vw;
+    }
+    #confirmCode{
+        width: 35vw;
+    }
+}
+@media only screen and (max-width:990px){
+    .fpCard{
+        width: 45vw;
+    }
+    .form-label{
+        font-size: 0.9rem;
+    }
+    #pass{
+        width: 38vw;
+    }
+    #confirmCode{
+        width: 38vw;
+    }
+    #feedback{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:840px){
+    .fpCard{
+        width: 50vw;
+    }
+    #pass{
+        width: 40vw;
+    }
+    #confirmCode{
+        width: 40vw;
+    }
+}
+@media only screen and (max-width:640px){
+    .lead{
+        font-size: 0.9rem;
+    }
+    .fpCard{
+        width: 55vw;
+    }
+    .form-label{
+        font-size: 0.85rem;
+    }
+    #pass{
+        width: 42vw;
+    }
+    #confirmCode{
+        width: 42vw;
+    }
+    #feedback{
+        font-size: 0.85rem;
+    }
+}
+@media only screen and (max-width:540px){
+    .lead{
+        font-size: 0.8rem;
+    }
+    .form-label{
+        font-size: 0.7rem;
+    }
+    .fpCard{
+        width: 55vw;
+        height: 45vh;
+    }
+    #feedback{
+        font-size: 0.7rem;
+    }
+}

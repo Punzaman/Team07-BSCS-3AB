@@ -1,0 +1,157 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    scroll-behavior: smooth;
+    background: #3F3E39;
+}
+.container-fluid{
+    min-height: 95vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#flogo{
+    height: auto;
+    width: 60px;
+}
+h2{
+    margin: 0.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #C69552;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+}
+.lead{
+    color: #f3f3f3;
+}
+.fpCard{
+    background: #acacac;
+    border-radius: 15px;
+    height: 48vh;
+    width: 35vw;
+}
+h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-top: 2rem;
+}
+.namecard{
+    height: 10vh;
+    width: 24rem;
+    background: #3F3E39;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    line-height: 1;
+}
+.user-avatar img{
+    background: #f3f3f3;
+    width: 45px;
+    height: 45px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.name a{
+    text-decoration: none;
+    text-align: center;
+    color: #f3f3f3;
+    line-height: 0.2rem;
+    font-size: 1.3rem;
+}
+.name a span{
+    color: #acacac;
+    font-size: 0.8rem;
+}
+.name a:hover{
+    color: #DC1E00;
+}
+#confirmCode{
+    width: 10vw;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navbar-nav .nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+.navbar-nav .nav-link:hover{
+    color: #DC1E00;
+}
+@media only screen and (max-width:1200px){
+    .fpCard{
+        width: 40vw;
+    }
+}
+@media only screen and (max-width:1000px){
+    .fpCard{
+        width: 45vw;
+        height: 45vh;
+    }
+    .instruction{
+       font-size: 0.8rem;
+        }
+}
+@media only screen and (max-width:880px){
+    .fpCard{
+        width: 50vw;
+    }
+    .instruction{
+       font-size: 0.75rem;
+    }
+    .namecard{
+        width: 46vw;
+    }
+    .name a{
+        font-size: 1.1rem;
+    }
+    .name a span{
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width:720px){
+    .name a{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:640px){
+    .lead{
+        font-size: 0.9rem;
+    }
+    .fpCard{
+        width: 55vw;
+        height: 40vh;
+    }
+    .instruction{
+       font-size: 0.68rem;
+    }
+    .name a{
+        font-size: 0.6rem;
+    }
+    .name a span{
+        font-size: 0.5rem;
+    }
+}
+@media only screen and (max-width:540px){
+    .lead{
+        font-size: 0.8rem;
+    }
+    .fpCard{
+        width: 55vw;
+    }
+    .instruction{
+       font-size: 0.6rem;
+    }
+}
