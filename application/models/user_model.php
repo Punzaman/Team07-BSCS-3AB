@@ -117,7 +117,7 @@ class User_model extends CI_Model {
 	public function updateUser($data){
 
 		if($this->update_usernameExist($data['username'], $data['user_id'])){
-			echo "username";
+			echo "usernameE";
 			return;
 		}
 		
@@ -134,7 +134,6 @@ class User_model extends CI_Model {
 			return;
 		}
 		else{
-			/* $data['user_pwd'] = password_hash($data['user_pwd'], PASSWORD_DEFAULT); */
 			$this->db->where('user_id', $data['user_id']);
 			unset($data['user_id']);
 			unset($data['user_pwdrepeat']);

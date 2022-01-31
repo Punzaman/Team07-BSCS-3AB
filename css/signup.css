@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.gradient-custom {
+ 
+    background: #857979;
+    background: -webkit-linear-gradient(to bottom right, rgb(151, 148, 151), rgb(82, 76, 76));
+    background: linear-gradient(to bottom right, rgb(68, 67, 68), rgb(49, 46, 46))
+  }
+  
+  body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    color: #3F3E39;
+    scroll-behavior: smooth;
+}
+header{
+    min-height: 100vh;
+    padding: 1rem;
+    background: #C69552  center/cover no-repeat fixed;
+    justify-content: stretch;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    height: auto;
+    width: 60px;
+}
+h2{
+    margin: 0.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+button{
+    color: #ffffff;
+    opacity: 1;
+}
+.navbar-toggler-icon{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.container{
+    max-width: 3320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+}
+.navbar-nav .nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+.navbar-nav .nav-link:hover{
+    color: #DC1E00;
+}
+.container h1{
+    font-family: 'Fredoka One', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+}
+#regBtn{
+    font-family: 'Fredoka One', cursive;
+    color: #3F3E39;
+    background: #ffffff;
+    border-color: #ffffff;
+    border-radius: 13px;
+}
+#regBtn:hover{
+    color: #ffffff;
+    background: #DC1E00;
+    border-color: #DC1E00;
+}
+.container .card{
+    margin-inline: 1rem;
+    background: #ffffff;
+}
+.container .card .form-floating{
+    color: #3F3E39;
+}
+.container .card .btn{
+    color: #ffffff;
+    margin: 0.5rem;
+}
+.container .card #forgotPass{
+    color: #1761C1;
+    text-decoration: none;
+}
+.container .card hr{
+    color: #3F3E39;
+    width: 90%;
+}
+@media only screen and (min-width:950px){
+    .container .card{
+        width: 700px;
+    }
+}
+@media only screen and (min-width:400px){
+
+}
+@media only screen and (max-width:950px){
+    .container{
+        flex-direction: column;
+    }
+    .container .card{
+        width: auto;
+    }
+}
+footer{
+    background-color: #724405;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    color: #fff;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+.social-links a:hover{
+    color: #DC1E00;
+}

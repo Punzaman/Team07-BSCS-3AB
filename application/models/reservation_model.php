@@ -1,21 +1,32 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Reservation_model extends CI_Model {
+class Reservation_model extends CI_Model
+{
 
 	private $table = "reservation";
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 	}
 
-    public function createReservation($data){
+	public function createReservation($data)
+	{
 
-        if(isset($data['reservePark']) && $data['reservePark'] != null){
+		if (isset($data['reservePark']) && $data['reservePark'] != null) {
 			$this->db->insert($this->table, $data);
 		}
-        
-        
-        print_r($data);
-    }
+
+
+		print_r($data);
+	}
+
+	public function reservationstatus($data)
+	{
+		if (isset($data['reservePark']) && $data['reservePark'] != null) {
+			$this->db->where('reserveId', $data['reserveId']);
+			$data['reserveStatus'] = 'Closed';
+			$this->db->update($this->table, $data);
+		}
+	}
 }
-    

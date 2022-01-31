@@ -1,3 +1,0 @@
-PHP WEBSITE
-
-PHP Database

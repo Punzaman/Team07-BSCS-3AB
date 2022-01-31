@@ -31,7 +31,7 @@ class Uservehicle extends CI_Controller {
 			if(isset($data['vehicle_type']) && $data['vehicle_type'] != null){
 				$this->load->model('uservehicle_model');
 				$this->uservehicle_model->addVehicle($data);
-				redirect(base_url(). "users/homepage");
+				redirect(base_url(). "users/news");
 	
 			}
         $this->load->view('users/addvehicle');

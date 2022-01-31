@@ -3,21 +3,12 @@
     /* print_r($result); */
 ?>
 
+<html xmlns="http://www.w3.org/1999/xhtml%22%3E
    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <style>
-table{
-  border: 1px solid black;
-  width: 50%;
-  text-align: center;
-}
-tr,td{
-  border: 1px solid black;
-  text-align: center;
-}
-</style>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Untitled Document</title>
    </head>
-   <table>
+   <table border="1">
       <tbody>
          <tr>
             <td>Reserve Date</td>
@@ -25,7 +16,6 @@ tr,td{
             <td>Vehicle Type</td> 
             <td>Vehicle Model</td> 
             <td>Plate Number</td> 
-            <td>Vehicle Color</td> 
          </tr>
    
          
@@ -38,7 +28,6 @@ tr,td{
                <td><?php echo $reservei['vehicle_type']?></td>
                <td><?php echo $reservei['vehicle_model']?></td>
                <td><?php echo $reservei['plate_no']?></td>
-               <td><?php echo $reservei['vehicle_color']?></td>
                
                </tr>
             <?php }
@@ -52,6 +41,7 @@ tr,td{
    </table>
 <body>
 </body>
+</html>
 
 <?php
     $this->load->view('templates/footer.php');
