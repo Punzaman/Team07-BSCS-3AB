@@ -1,1 +1,3 @@
-WELCOME TO GROUP 7 REPOSITORY
+Team 7 Initial Commit
+Kurky was here
+Kennywapybels
