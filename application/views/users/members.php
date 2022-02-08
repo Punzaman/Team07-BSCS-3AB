@@ -35,15 +35,15 @@
         if (isset($_SESSION["user_firstname"])) {
         ?>
           <a href='<?php echo base_url() . "users/news" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
-            <h2> PAYPARK</h2>
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
+            <h2 class="text-light">PAYPARK</h2>
           </a>
         <?php
         } else {
         ?>
           <a href='<?php echo base_url() . "index.php" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
-            <h2> PAYPARK</h2>
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
+            <h2 class="text-light">PAYPARK</h2>
           </a>
         <?php
         }
@@ -55,10 +55,6 @@
 
         <div class="collapse navbar-collapse" id="navbarLinks">
           <div class="navbar-nav ms-auto">
-
-            <a href='<?php echo base_url() . "users/about" ?>' class="nav-item nav-link mx-auto px-2">ABOUT</a>
-            <a href='<?php echo base_url() . "users/contacts" ?>' class="nav-item nav-link mx-auto px-2">CONTACTS</a>
-            <a href='<?php echo base_url() . "users/members" ?>' class="nav-item nav-link mx-auto px-2">MEMBERS</a>
 
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
@@ -87,13 +83,13 @@
             <?php
             }
             ?>
-            
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/settings" ?>' class="nav-item nav-link mx-auto px-2">SETTINGS</a></class=>
+              <a href='<?php echo base_url() . "users/logout" ?>' class="nav-item nav-link mx-auto px-2">LOG OUT</a></class=>
             <?php
             }
             ?>
+
           </div>
         </div>
       </div>
@@ -101,12 +97,12 @@
 
     <section class="members m-0">
       <div class="container">
-        <h1 class="title text-light">Members</h1>
+        <h1 class="title text-light m-0">Members</h1>
         <div class="row">
           <div class="col-md-3 profile text-center">
             <div class="img-box">
               <img src="<?php echo base_url() ?>css/images/aira-mem.jpg" class="img-responsive w-30" style="height: 15rem">
-              <ul>
+                <ul>
                 <a href="#">
                   <li><i class="fa fa-facebook"></i></li>
                 </a>
@@ -128,7 +124,7 @@
 
           <div class="col-md-3 profile text-center">
             <div class="img-box">
-              <img src="<?php echo base_url() ?>css/images/prof.jpg" class="img-responsive w-30" style="height:15rem">
+              <img src="<?php echo base_url() ?>css/images/daniel-mem.jpg" class="img-responsive w-30" style="height:15rem">
               <ul>
                 <a href="#">
                   <li><i class="fa fa-facebook"></i></li>
@@ -151,7 +147,7 @@
 
           <div class="col-md-3 profile text-center">
             <div class="img-box">
-              <img src="<?php echo base_url() ?>css/images/prof2.jpg" class="img-responsive w-30" style="height:15rem">
+              <img src="<?php echo base_url() ?>css/images/rose-mem.jpg" class="img-responsive w-30" style="height:15rem">
               <ul>
                 <a href="#">
                   <li><i class="fa fa-facebook"></i></li>
@@ -244,7 +240,7 @@
 
             <div class="col-md-3 profile text-center">
               <div class="img-box">
-                <img src="<?php echo base_url() ?>css/images/chiq-mem.jpg" class="img-responsive w-30" style="height:15rem">
+                <img src="<?php echo base_url() ?>css/images/chiq-mem.png" class="img-responsive w-30" style="height:15rem">
                 <ul>
                   <a href="#">
                     <li><i class="fa fa-facebook"></i></li>
@@ -280,3 +276,155 @@
 </body>
 
 </html>
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    scroll-behavior: smooth;
+}
+.navbar{
+    background-color: #C69552;
+}
+.container-fluid{
+    max-width: 3320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: row;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    height: auto;
+    width: 60px;
+}
+.navbar h2{
+    margin: 0.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+button{
+    color: #ffffff;
+    opacity: 1;
+}
+.navbar-toggler-icon{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.navbar-nav .nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+.navbar-nav .nav-link:hover{
+    color: #DC1E00;
+}
+.members{
+    background-color: #C69552;
+    margin: 0;
+    padding-top: 4rem;
+    justify-content: space-between;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+h1:after{
+    content: '';
+    background: #ffffff;
+    color: #ffffff;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+.profile{
+    margin-top: 25px;
+}
+.profile .img-box{
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+.profile h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+}
+.profile h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+}
+.profile p{
+    color: #ffffff;
+}
+.img-box:after{
+    content: "";
+    opacity: 0;
+    background-color: rgba(0,0,0,0.6);
+    padding-bottom: 100px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+.img-box ul{
+    margin: 0;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 105px;
+    display: flex;
+    left: 23%;
+    opacity: 0;
+}
+.img-box ul li{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    margin: 3px;
+    padding: 1px;
+    display: inline-block;
+}
+.img-box a{
+    color: #ffffff;
+}
+.img-box:hover::after{
+    opacity: 1;
+}
+.img-box:hover ul{
+    opacity: 1;
+}
+.img-box a:hover li{
+    color: #DC1E00;
+    border: 1px solid #DC1E00;
+}
+.img-box:after, .img-box ul, .img-box ul li{
+    transition: all 0.3s ease-in-out 0s;
+}
+.row{
+    flex-direction: row;
+    justify-content: center;
+}
+  </style>

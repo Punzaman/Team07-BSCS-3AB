@@ -7,6 +7,7 @@ body {
 }
 .container{
     padding-top: 40px;
+    display: flex;
 }
 p{
     color: black;
@@ -132,3 +133,4 @@ button{
 {
     margin-top: 20px;
 }
+

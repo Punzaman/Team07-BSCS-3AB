@@ -35,14 +35,14 @@
         if (isset($_SESSION["user_firstname"])) {
         ?>
           <a href='<?php echo base_url() . "users/news" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
             <h2> PAYPARK</h2>
           </a>
         <?php
         } else {
         ?>
           <a href='<?php echo base_url() . "index.php" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
             <h2> PAYPARK</h2>
           </a>
         <?php
@@ -55,10 +55,6 @@
 
         <div class="collapse navbar-collapse" id="navbarLinks">
           <div class="navbar-nav ms-auto">
-
-            <a href='<?php echo base_url() . "users/about" ?>' class="nav-item nav-link mx-auto px-2">ABOUT</a>
-            <a href='<?php echo base_url() . "users/contacts" ?>' class="nav-item nav-link mx-auto px-2">CONTACTS</a>
-            <a href='<?php echo base_url() . "users/members" ?>' class="nav-item nav-link mx-auto px-2">MEMBERS</a>
 
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
@@ -87,24 +83,30 @@
             <?php
             }
             ?>
-
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/settings" ?>' class="nav-item nav-link mx-auto px-2">SETTINGS</a></class=>
+              <a href='<?php echo base_url() . "users/logout" ?>' class="nav-item nav-link mx-auto px-2">LOG OUT</a></class=>
             <?php
             }
             ?>
-            
+
           </div>
         </div>
       </div>
     </nav>
 
     <div class="container">
-      <div class="p-5 mt-5">
+      <div class="p-2 mt-3">
         <h1> <strong>About Us</strong> </h1>
-        <p class="lead "> Razer’s award-winning hardware includes high-performance gaming peripherals and Blade gaming laptops.</p>
-
+        <p class="lead "> Paypark was founded in 2021. Paypark facilitates the efficient movement of people, vehicles and personal belongings with the  
+          goal of enhancing the customer experience while improving bottom 
+          <br>
+          line results for our clients. Paypark provides professional parking management, ground transportation,
+          <br>
+          facility maintenance, security, and other technology-driven mobility solutions to aviation, commercial,
+          <br>
+          healthcare and government clients across the Philippines.
+        </p>
       </div>
 
       <div class="card m-2 card-md card-lg justify-content-center">

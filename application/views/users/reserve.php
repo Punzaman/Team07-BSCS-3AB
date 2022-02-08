@@ -56,11 +56,6 @@
         <div class="collapse navbar-collapse" id="navbarLinks">
           <div class="navbar-nav ms-auto">
 
-            <a href='<?php echo base_url() . "users/about" ?>' class="nav-item nav-link mx-auto px-2">ABOUT</a>
-            <a href='<?php echo base_url() . "users/contacts" ?>' class="nav-item nav-link mx-auto px-2">CONTACTS</a>
-            <a href='<?php echo base_url() . "users/members" ?>' class="nav-item nav-link mx-auto px-2">MEMBERS</a>
-
-
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
               <a href='<?php echo base_url() . "users/parking" ?>' class="nav-item nav-link mx-auto px-2">PARKING PAYMENT</a></class=>
@@ -87,88 +82,107 @@
             <?php
             }
             ?>
-            
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/settings" ?>' class="nav-item nav-link mx-auto px-2">SETTINGS</a></class=>
+              <a href='<?php echo base_url() . "users/logout" ?>' class="nav-item nav-link mx-auto px-2">LOG OUT</a></class=>
             <?php
             }
             ?>
+
           </div>
         </div>
       </div>
     </nav>
-    <section class="vh-100 bg-image">
-      <div class="mask d-flex align-items-center h-50 gradient-custom-3">
 
-        <div class="container py-3 h-50">
-          <div class="row justify-content-center align-items-center h-50">
-            <div class="col-8 col-lg-7 col-xl-6">
-              <div class="card shadow-2-strong card-registration" style="border-radius: 20px;">
-                <div class="card-body p-5 p-md-6">
+    <div class="container py-5">
+      <div class="row justify-content-center align-items-center h-60">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 20px;">
+          <div class="card-body p-5 p-md">
 
-                  <center>
-                    <h3 class="mb-8 pb-2 pb-md-0 mb-md-9">Reservation Form</h3>
-                    <p class="lead">Let's set up your reservation details!</p>
-                  </center>
-                  <form method="post">
-                    <div class="row">
-                      <div class="col-md-9 mb-8">
-                        <br>
-                        <h4>Select a time to park</h4>
-                        <div class="col-md-8">
-                          <center>
-                            <label for="appt">Parking Time:</label>
-                            <input type="time" name="reservePark" id="reservePark">
+            <center>
+              <h3 class="mb-8 pb-2 pb-md-0 mb-md-9">Reservation Form</h3>
+              <p class="lead">Let's set up your reservation details!</p>
+            </center>
+            <form method="post">
+              <div class="row">
+                <div class="col-md-9 mb-8">
+                  <br>
+                  <h4>Select a time to park</h4>
+                  <div class="col-md-8">
+                    <center>
+                      <label for="time">Parking Time:</label>
+                      <select name="reservePark" id="reservePark">
+                        <option value="10:00 AM">10:00</option>
+                        <option value="11:00 AM">11:00</option>
+                        <option value="12:00 AM">12:00</option>
+                        <option value="1:00 PM">13:00</option>
+                        <option value="2:00 PM">14:00</option>
+                        <option value="3:00 PM">15:00</option>
+                        <option value="4:00 PM">16:00</option>
+                        <option value="5:00 PM">17:00</option>
+                        <option value="6:00 PM">18:00</option>
+                        <option value="7:00 PM">19:00</option>
+                        <option value="8:00 PM">20:00</option>
+                        <option value="9:00 PM">21:00</option>
+                        <option value="10:00 PM">22:00</option>
+                      </select>
 
-                          </center>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-9 mb-8">
-                        <br>
-                        <h4>Select a date to park</h4>
-                        <div class="col-md-10">
-
-                          <label for="appt">Parking Date:</label>
-                          <input type="date" id="reserveDate" name="reserveDate">
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-9 mb-8">
-                        <br>
-
-                        <h4>Select a vehicle </h4>
-                        <div class="col-md-8">
-                          <label for="cars">Choose a car:</label>
-                          <select name="reserveVehicle">
-                            <?php foreach ($car as $kotse) : ?>
-                              <option value="<?= $kotse['vehicle_id'] ?>"><?php echo $kotse['vehicle_model'] ?></option>
-                            <?php endforeach; ?>
-                          </select>
-                        </div>
-                      </div>
-
-
-
-                      <div class="d-grid gap-2 col-10 mx-auto">
-                        <br>
-                        <div class="d-grid gap-2 col-6 mx-auto">
-
-                          <button type="submit" class="btn btn-success">Submit</button>
-                          <button type="button"><a href="<?php echo base_url() . "reservation/location" ?>">Cancel</a></button>
-                  </form>
+                    </center>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              <div class="row">
+                <div class="col-md-9 mb-8">
+                  <br>
+                  <h4>Select a date to park</h4>
+                  <div class="col-md-10">
+                    <center>
+                      <label for="appt">Parking Date:</label>
+                      <input type="date" id="reserveDate" name="reserveDate">
+                    </center>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-9 mb-8">
+                  <br>
+                  <h4>Select a vehicle </h4>
+                  <div class="col-md-6">
+                    <center>
+                      <label for="cars">Choose a car:</label>
+                      <select name="reserveVehicle">
+                        <?php foreach ($car as $kotse) : ?>
+                          <option value="<?= $kotse['vehicle_id'] ?>"><?php echo $kotse['vehicle_model'] ?></option>
+                        <?php endforeach; ?>
+                    </center>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="d-grid gap-2 col-10 mx-auto">
+                  <br>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-success"><a href="<?php echo base_url() . "reservation/location" ?>" style="color:white">Cancel</a></button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
-    </section>
+        </div>
+      </div>
+    </div>
   </header>
+  <footer>
+    <div class="social-links">
+      <a href="" target="_blank"> <i class="fa fa-facebook-f"></i></a>
+      <a href="" target="_blank"> <i class="fa fa-twitter"></i></a>
+      <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
+    </div>
+    <h5>Copyright &copy;2021 PayPark | All Rights Reserved</h5>
+  </footer>
 </body>
 
 </html>

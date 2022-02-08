@@ -31,8 +31,6 @@
       <a href="confirmAcct.html" class="navbar-brand"><img id="flogo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
         <h2> PAYPARK</h2>
       </a>
-      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Laborum, facilis unde tenetur nulla nam assumenda temporibus voluptatibus.
-      </p>
     </div>
 
     <div class="fpCard mx-auto">
@@ -44,15 +42,6 @@
 
       <a href="<?php echo base_url() . "users/logout" ?>"><button type="button" id="confirmCode" class="btn btn-primary btn-sm my-3 ms-auto"> <strong> Confirm </strong> </button></a>
     </div>
-
-    <div class="navbar-nav mt-5">
-      <a href="#" class="nav-item nav-link px-2">HOME</a>
-      <a href="About/index.html" class="nav-item nav-link px-2">ABOUT</a>
-      <a href="#" class="nav-item nav-link px-2">LOREM</a>
-      <a href="#" class="nav-item nav-link px-2">LOREM</a>
-      <a href="#" class="nav-item nav-link px-2">LOREM</a>
-    </div>
-
 
   </div>
 

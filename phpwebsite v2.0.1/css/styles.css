@@ -1,0 +1,55 @@
+body{
+    background: url(bg1.jpg) center/cover no-repeat fixed;;
+}
+.navbar{
+    padding: 2rem;
+    height: 6rem;
+}
+.navbar-light .navbar-nav .nav-link{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #1761C1;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+}
+.container .btn:hover{
+    background-color: #6b6130;
+    color: #ffffff;
+}
+.container .card{
+    margin-inline: 1rem;
+}
+.container .card .form-floating{
+    color: #3F3E39;
+}
+.container .card .btn{
+    color: #ffffff;
+    margin: 0.5rem;
+}
+.container .card #forgotPass{
+    color: #1761C1;
+    text-decoration: none;
+}
+.container .card hr{
+    color: #3F3E39;
+    width: 90%;
+}
+@media only screen and (min-width:950px){
+    .container .card{
+        width: 800px;
+    }
+}
+@media only screen and (max-width:950px){
+    .container{
+        flex-direction: column;
+    }
+    .container .card{
+        width: auto;
+    }
+}

@@ -56,10 +56,6 @@
         <div class="collapse navbar-collapse" id="navbarLinks">
           <div class="navbar-nav ms-auto">
 
-            <a href='<?php echo base_url() . "users/about" ?>' class="nav-item nav-link mx-auto px-2">ABOUT</a>
-            <a href='<?php echo base_url() . "users/contacts" ?>' class="nav-item nav-link mx-auto px-2">CONTACTS</a>
-            <a href='<?php echo base_url() . "users/members" ?>' class="nav-item nav-link mx-auto px-2">MEMBERS</a>
-
             <?php
             if (isset($_SESSION["user_firstname"])) { ?>
               <a href='<?php echo base_url() . "users/parking" ?>' class="nav-item nav-link mx-auto px-2">PARKING PAYMENT</a></class=>

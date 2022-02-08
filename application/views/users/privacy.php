@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>css/settings.css">
     <title>Settings</title>
 </head>
-
+<?php
+		$id = $_SESSION["user_id"];
+	?>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark">
         <div class="prevButton px-5"><a href="<?php echo base_url() . "users/news" ?>"><i class="fa fa-arrow-left"></i>&nbsp &nbsp SETTINGS</a></div>
@@ -54,30 +56,24 @@
         <div class="content">
             <h2>Privacy Settings</h2>
             <div class="generalPass">
-                <div class="passAttri px-4">
-                    <p class="pt-2">Enter your password</p>
-                    <div class="col-auto">
-                        <input type="password" class="form-control form-control-sm is-valid pb-1" id="pass" type="text" placeholder=" Enter your password" aria-label=".form-control-sm example" valid="Password" required>
-                    </div>
-                </div>
-
+        <form method="post">
+            <?php echo '<input type="hidden" name="user_id" value='.$id.'>'; ?><br>
                 <hr>
                 <div class="passAttri px-4">
                     <p>Enter the New Password</p>
                     <div class="col-auto">
-                        <input type="password" class="form-control form-control-sm is-valid pb-1" id="pass" type="text" placeholder=" Enter new password" aria-label=".form-control-sm example" valid="Password" required>
+                        <input type="password" name="user_pwd" class="form-control form-control-sm is-valid pb-1"  placeholder=" Enter new password" aria-label=".form-control-sm example" required>
                     </div>
                 </div>
 
                 <hr>
                 <div class="passAttri px-4">
                     <p>Confirm New Password</p>
-                    <input type="password" class="form-control form-control-sm is-invalid" id="pass" type="text" placeholder=" Confirm password" aria-label=".form-control-sm example" required>
+                    <input type="password" name="user_pwdrepeat" class="form-control form-control-sm is-invalid"  id="pass" type="text" placeholder=" Confirm password" aria-label=".form-control-sm example" required>
                 </div>
             </div>
-
-            <a href="index.html" class="ms-auto"><button type="button" id="confirmCode1" class="btn btn-primary btn-sm mt-4"> <strong>Save</strong> </button></a>
-
+            <a href="" class="ms-auto"><button type="submit" id="confirmCode1" class="btn btn-primary btn-sm mt-4"> <strong>Save</strong> </button></a>
+        </form>
         </div>
 
     </main>

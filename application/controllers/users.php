@@ -4,21 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Users extends CI_Controller
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('users/index');
@@ -32,9 +17,15 @@ class Users extends CI_Controller
 		$data = $this->input->post();
 		if (isset($data) && $data != null) {
 			$this->load->model('user_model');
-			$this->user_model->createUser($data);
-			redirect(base_url());
+			$userdata = $this->user_model->createUser($data);
+			$user = $this->user_model->getUser($userdata);
+			$_SESSION['user'] = $user[0];
+			if (is_int($userdata)) {
+				redirect('users/sendEmail/' . $userdata);
+			} 
+			echo "error";
 		}
+
 		$this->load->view('users/signup');
 	}
 
@@ -49,7 +40,7 @@ class Users extends CI_Controller
 			$return = $this->user_model->loginUser($data['username'], $data['user_pwd']);
 
 			if (is_bool($return)) {
-				echo "login error";
+				echo "Login error. Passsword or Username incorrect.";
 			} else {
 				$_SESSION['user_id'] = $return[0]['user_id'];
 				$_SESSION['username'] = $return[0]['username'];
@@ -58,6 +49,7 @@ class Users extends CI_Controller
 				$_SESSION['user_email'] = $return[0]['user_email'];
 				$_SESSION['user_cpnumber'] = $return[0]['user_cpnumber'];
 				$_SESSION['user_address'] = $return[0]['user_address'];
+				$_SESSION['user_gender'] = $return[0]['user_gender'];
 				redirect(base_url() . "users/news");
 			}
 		}
@@ -89,9 +81,12 @@ class Users extends CI_Controller
 			$i++;
 		}
 		//return the data in view
-		$this->load->view('users/parking', $output);
+		if (isset($output) != null) {
+			$this->load->view('users/parking', $output);
+		} else {
+			$this->load->view('users/parking');
+		}
 	}
-
 	public function logout()
 	{
 		session_destroy();
@@ -127,8 +122,18 @@ class Users extends CI_Controller
 	#Function that calls profile.php
 	public function profile()
 	{
-
-		$this->load->view('users/profile');
+		$data = array();
+		$data = $this->input->post();
+		$data['reserveUser'] = $_SESSION['user_id'];
+		$this->load->model('select_vehicle');
+		$output['car'] = $this->select_vehicle->getVehicle($_SESSION['user_id']);
+		if (isset($data['reservePark']) && $data['reservePark'] != null) {
+			$this->load->model('reservation_model');
+			$this->reservation_model->createReservation($data);
+			redirect(base_url() . "users/news");
+		}
+	
+		$this->load->view('users/profile', $output);
 	}
 
 	public function members()
@@ -161,10 +166,21 @@ class Users extends CI_Controller
 		$this->load->view('users/notifications');
 	}
 
-	public function privacy()
-	{
+	public function privacy(){
+		$this->load->model('user_model');
+		$user = $this->user_model->getUser($_SESSION['user_id']);
+			 
+		$output['user'] = $user[0];
+		
+		$data = array();
+		$data = $this->input->post();
 
-		$this->load->view('users/privacy');
+		if(isset($data) && $data != null){
+			$this->load->model('user_model');
+			$this->user_model->updateUserpw($data);
+
+		}
+		$this->load->view('users/privacy', $output);
 	}
 
 	public function deactivate()
@@ -228,6 +244,46 @@ class Users extends CI_Controller
 			$i++;
 		}
 		//return the data in view
-		$this->load->view('users/parkinghistory', $output);
+		//$this->load->view('users/parkinghistory', $output);
+		if (isset($output) != null) {
+			$this->load->view('users/parkinghistory', $output);
+		} else {
+			$this->load->view('users/parkinghistory');
+		}
 	}
+
+	public function sendEmail($id = null)
+	{
+		$email['protocol'] = 'smtp';
+		$email['smtp_host'] = 'smtp.gmail.com';
+		$email['smtp_user'] = "softwareone40@gmail.com";
+		$email['smtp_pass'] = 'pcfwlxkuaxjmppuc';
+		$email['smtp_port'] = '587';
+		$email['smtp_crypto'] = 'tls';
+
+		$this->load->library('email', $email);
+
+		$this->email->set_newline("\r\n");
+
+		$this->load->model('user_model');
+		$user = $this->user_model->getUser($id);
+
+		$email = $user[0]['user_email'];
+
+		$this->email->set_mailtype('html');
+		$this->email->subject('Account Verification');
+		$this->email->to($email);
+		$this->email->from('softwareone40@gmail.com');
+		$this->email->message('Your PayPark account has been successfully created! Please <strong> <a href="' . base_url() . 'users/index/' . $email . '/' . '">click here</a></strong> to activate your account');
+		$this->email->send();
+		/* echo $this->email->print_debugger(); */
+		
+		echo '<script>
+		alert("Please verify your account in your email");
+		window.location.href="http://localhost/paypark";
+		</script>';
+		/* redirect('users/verifyemail/'); */
+		
+	}
+
 }

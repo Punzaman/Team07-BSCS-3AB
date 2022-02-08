@@ -22,109 +22,154 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="<?php echo base_url(); ?>css/index.css">
   <title>PayPark</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md px-4">
-      <div class="container-fluid">
-
-        <?php
+<div class="container-fluid mx-auto">
+    <div class="pictureSection mx-auto mb-4">
+    
+      <?php
         if (isset($_SESSION["user_firstname"])) {
         ?>
-          <a href='<?php echo base_url() . "users/news" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
-            <h2> PAYPARK</h2>
+          <a href='<?php echo base_url() . "users/index" ?>' class="brand">
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
           </a>
         <?php
         } else {
         ?>
-          <a href='<?php echo base_url() . "" ?>' class="navbar-brand">
-            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark Logo.png" alt="PayPark LOGO">
-            <h2> PAYPARK</h2>
+          <a href='<?php echo base_url() . "" ?>' class="brand">
+            <img id="logo" src="<?php echo base_url() ?>css/images/PayPark.png" alt="PayPark LOGO">
           </a>
         <?php
         }
         ?>
-
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
-          <span class="navbar-toggler-icon"> </span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarLinks">
-          <div class="navbar-nav ms-auto">
-
-            <a href='<?php echo base_url() . "users/about" ?>' class="nav-item nav-link mx-auto px-2">ABOUT</a>
-            <a href='<?php echo base_url() . "users/contacts" ?>' class="nav-item nav-link mx-auto px-2">CONTACTS</a>
-            <a href='<?php echo base_url() . "users/members" ?>' class="nav-item nav-link mx-auto px-2">MEMBERS</a>
-            <?php
-            if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/parking" ?>' class="nav-item nav-link mx-auto px-2">PARKING PAYMENT</a></class=>
-            <?php
-            }
-            ?>
-
-            <?php
-            if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/profile" ?>' class="nav-item nav-link mx-auto px-2">PROFILE</a>
-            <?php
-            }
-            ?>
-
-            <?php
-            if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/parkinghistory" ?>' class="nav-item nav-link mx-auto px-2">HISTORY</a></class=>
-            <?php
-            }
-            ?>
-
-            <?php
-            if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "reservation/location" ?>' class="nav-item nav-link mx-auto px-2">RESERVE</a></class=>
-            <?php
-            }
-            ?>
-
-            <?php
-            if (isset($_SESSION["user_firstname"])) { ?>
-              <a href='<?php echo base_url() . "users/settings" ?>' class="nav-item nav-link mx-auto px-2">SETTINGS</a></class=>
-            <?php
-            }
-            ?>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="container p-5">
-      <div class="p-5">
-        <h1><strong>WELCOME TO PAYPARK!</strong> </h1>
-        <p class="lead ">Let's make your parking experience easier, safer and more convenient. Create your own account now and experience parking with cashless payment transaction.</p>
-
-        <p><a href='<?php echo base_url() . "users/about" ?>' id="regBtn" class="btn btn-light btn-lg mt-2">EXPLORE</a></p>
-      </div>
-
-      <div class="card m-3 card-md card-lg justify-content-center">
-        <button type="button" class="btn btn-primary btn-lg"> <strong> <a class="text-light" href="<?php echo base_url() . "users/login" ?>"> LOG IN </a> </strong> </button>
-
-        <button type="button" class="btn btn-success btn-lg"> <a class="text-light" href="<?php echo base_url() . "users/signup" ?>"> REGISTER</a> </button>
-
-      </div>
+    
     </div>
-  </header>
+
+    <div class="textSection mx-auto mb-2">
+      <h2>WELCOME TO PAYPARK</h2>
+      <p>Let's make your parking experience easier, safer and more convenient. Create your own account now and experience parking with cashless payment transaction.</p>
+
+      <button type="button" class="btn btn-primary mx-auto"> <strong> <a class="text-light" href="<?php echo base_url() . "users/login" ?>"> LOG IN </a> </strong> </button>
+
+      <button type="button" class="btn btn-success mx-auto"> <a class="text-light" href="<?php echo base_url() . "users/signup" ?>"> REGISTER</a> </button>
+    </div>
+  </div>
 
   <footer>
-    <div class="social-links">
-      <a href="" target="_blank"> <i class="fa fa-facebook-f"></i></a>
-      <a href="" target="_blank"> <i class="fa fa-twitter"></i></a>
-      <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
-    </div>
-    <h5>Copyright &copy;2021 PayPark | All Rights Reserved</h5>
-  </footer>
+      <div class="social-links">
+        <a href="" target="_blank"> <i class="fa fa-facebook-f"></i></a>
+        <a href="" target="_blank"> <i class="fa fa-twitter"></i></a>
+        <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
+      </div>
+      <h5>Copyright &copy;2021 PayPark | All Rights Reserved</h5>
+    </footer>
+  
 
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
+    color: #3F3E39;
+    scroll-behavior: smooth;
+    background: #C69552;
+    text-align: center;
+}
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+    min-height: 95vh;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    padding-inline: 5rem;
+    align-items: center;
+}
+.textSection{
+    width: 60%;
+}
+.textSection .btn{
+    text-decoration: none;
+    width: 10rem;
+}
+.container-fluid p{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.pictureSection{
+    width: 50%;
+}
+#logo{
+    height: auto;
+    width: 600px;
+}
+h2{
+    font-family: 'Fredoka One', cursive;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+footer{
+    background-color: #724405;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    color: #fff;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+.social-links a:hover{
+    color: #DC1E00;
+}
+@media only screen and (max-width:1150px){
+    #logo{
+        height: auto;
+        width: 400px;
+    }
+}
+@media only screen and (max-width:900px){
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        padding-inline: 0;
+    }
+    #logo{
+        height: auto;
+        width: 100px;
+    }
+    .textSection{
+        width: 80%;
+    }
+}
+
+
+</style>
