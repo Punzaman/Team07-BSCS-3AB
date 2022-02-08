@@ -106,7 +106,7 @@
             <div class="center">
               <div class="d-grid gap-2 col-6 mx-auto">
                 <br>
-                <button type="button" class="btn btn-success"> <a href='<?php echo base_url() . "reservation/reserve/MANILA" ?>' style="color:white"> SELECT MANILA</button> </a>
+                <button type="button" class="btn btn-success"> <a href='<?php echo base_url() . "reservation/reserveMANILA" ?>' style="color:white"> SELECT MANILA</button> </a>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
             <div class="center">
               <div class="d-grid gap-2 col-6 mx-auto">
                 <br>
-                <button type="button" class="btn btn-success"> <a href='<?php echo base_url() . "reservation/reserve/CAVITE" ?>' style="color:white"> SELECT CAVITE </button> </a>
+                <button type="button" class="btn btn-success"> <a href='<?php echo base_url() . "reservation/reserveCAVITE" ?>' style="color:white"> SELECT CAVITE </button> </a>
               </div>
             </div>
           </div>
